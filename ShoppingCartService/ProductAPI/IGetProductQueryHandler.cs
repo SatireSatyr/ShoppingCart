@@ -9,6 +9,7 @@ namespace ProductAPI
 {
     public interface IGetProductQueryHandler
     {
-        public Product Handle(long productId);
+        public Task<Product> Handle(long productId);
+        public Task<List<Product>> GetProducts();
     }
 }
