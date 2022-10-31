@@ -4,14 +4,14 @@ namespace ProductAPI
 {
     public class GetProductQueryHandler : IGetProductQueryHandler
     {
-        public Product? Handle(long productId)
+        public Task<Product?> Handle(long productId)
         {
-            return new Products()[productId];
+            return Task.FromResult(new Products()[productId]);
         }
 
-        public List<Product> GetProducts()
+        public Task<List<Product>> GetProducts()
         {
-            return new Products().GetProducts();
+            return Task.FromResult(new Products().GetProducts());
         }
     }
 }

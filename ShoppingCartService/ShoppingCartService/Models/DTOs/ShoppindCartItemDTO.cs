@@ -4,6 +4,6 @@ namespace ShoppingCartService.Models.DTOs
 {
     public class ShoppindCartItemDTO : ShoppingCartItem
     {
-        public ProductDTO Product { get; set; }
+        public ProductDTO? Product { get; set; }
     }
 }
